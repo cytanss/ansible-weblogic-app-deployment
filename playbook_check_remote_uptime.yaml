@@ -8,3 +8,8 @@
 
       - debug:
           var: uptimeoutput.stdout_lines
+
+      - name: Creating an empty file at home directory
+        file:
+          path: "/home/cytan/test.txt"
+          state: touch
