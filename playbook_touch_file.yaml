@@ -3,6 +3,6 @@
   tasks:
     - name: Creating an empty file at home directory
       file:
-        path: "~/"
+        path: "/home/cytan/test.txt"
         state: touch
       become: yes
