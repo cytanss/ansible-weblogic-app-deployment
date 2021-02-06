@@ -3,4 +3,4 @@
   tasks:
     - name: Hello Message
       debug:
-        meg: "Hello from CY Tan"
+        msg: "Hello from CY Tan"
