@@ -1,6 +1,6 @@
 ---
-  - name: Using VS Code Editor
-    hosts: all
-    tasks:
-      -  debug:
-         meg: "Hello from CY Tan"
+- name: Using VS Code Editor
+  hosts: all
+  tasks:
+    - debug:
+      meg: "Hello from CY Tan"
