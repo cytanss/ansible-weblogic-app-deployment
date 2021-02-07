@@ -1,6 +1,0 @@
-- name: Using VS Code Editor
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello from CY Tan"

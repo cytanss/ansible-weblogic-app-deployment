@@ -1,8 +1,0 @@
-- name: Touch a file at the remote node for testing
-  hosts: all
-  tasks:
-    - name: Creating an empty file at home directory
-      file:
-        path: "/home/cytan/test.txt"
-        state: touch
-      become: yes
