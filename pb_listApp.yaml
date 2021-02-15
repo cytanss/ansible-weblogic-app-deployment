@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Listing the applicaitons deployed
-      command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username 'weblogic' -password 'r3dh4t1!' -listapps"
+      command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username {{ username | default('weblogic') }} -password {{ password | default('r3dh4t1!') }} -listapps"
       register: output
 #      failed_when: "'SampleWebApp' not in output.stdout"
 
