@@ -1,0 +1,18 @@
+- name: Download artifact from Nexus to deployment folder
+  hosts: all
+  tasks:
+    - name:                 Download artifact from Nexus
+      maven_artifact:
+        repository_url:     "http://192.168.215.1:8081/repository/releases/"
+        group_id:           "com.redhat"
+        artifact_id:        "SampleWebApp"
+        version:            "latest"
+        extension:          "war"
+        dest:               "/home/cytan/Downloads/SampleWebApp.war"
+        mode:               '0755'
+        verify_checksum:    always
+
+#    - name:                 Update the war file permission
+#      file:
+#        path: "/home/cytan/Downloads/tmp/SampleWebApp.war"
+#        mode: '0755'
