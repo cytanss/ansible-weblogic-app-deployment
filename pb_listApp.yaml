@@ -1,5 +1,5 @@
 - name: List the applicaitons deployed
-#  hosts: weblogic
+  hosts: all
   tasks:
     - name: Deploying SampleWebApp to WebLogic Cluster wls_cluster_1
       command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username 'weblogic' -password 'r3dh4t1!' -listapps"
