@@ -1,5 +1,5 @@
 - name: Deploy an applicaiton
-  hosts: weblogic
+  hosts: all
   tasks:
     - name: Deploying SampleWebApp to WebLogic Cluster wls_cluster_1
       command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username {{ username | default('weblogic') }} -password {{ password | default('r3dh4t1!') }} -name {{ appname | default('SampleWebApp!') }} /home/cytan/Downloads/SampleWebApp.war -deploy -targets {{ targets | default('wls_cluster_1!') }} -timeout 300"
