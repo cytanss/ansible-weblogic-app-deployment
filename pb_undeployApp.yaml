@@ -1,7 +1,7 @@
-- name: Testing Playground
+- name: Undeploy an applicaiton
   hosts: weblogic
   tasks:
-    - name: Deploying SampleWebApp to WebLogic Cluster wls_cluster_1
+    - name: Undeploying SampleWebApp to WebLogic Cluster wls_cluster_1
       command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username 'weblogic' -password 'r3dh4t1!' -name SampleWebApp -undeploy -timeout 300"
       register: output
 

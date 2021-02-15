@@ -1,4 +1,4 @@
-- name: Testing Playground
+- name: Deploy an applicaiton
   hosts: weblogic
   tasks:
     - name: Deploying SampleWebApp to WebLogic Cluster wls_cluster_1

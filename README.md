@@ -20,4 +20,5 @@
 > - [Oracle WebLogic Server with RESTful Management Services](https://docs.oracle.com/middleware/1221/wls/WLRUR/title.htm)  
 
 ### 2.2 Ansible:
-> 
+> https://github.com/devops-recipes/cd_war_vm_ansible/blob/master/ansible/war_deploy_playbook.yml
+> http://blog.shippable.com/deploy-a-war-package-from-nexus-to-aws-using-ansible
