@@ -1,0 +1,10 @@
+- name: List and verify the application deployed at DR
+  hosts: all
+  tasks:
+    - name: List and verify the applicaitons deployed at DR
+      command: "/home/cytan/Oracle/Middleware/Oracle_Home/oracle_common/common/bin/wlst.sh /home/cytan/Oracle/Middleware/Oracle_Home/oracle_common/common/bin/py_drListApp.py {{ username | default('deployer') }} {{ password | default('weblogic1') }} {{ appname | default('SampleWebApp') }} "
+      register: output
+      failed_when: "'Name=SampleWebApp,Type=AppDeployment' not in output.stdout"
+
+    - debug:
+        var: output
