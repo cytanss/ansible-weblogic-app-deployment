@@ -1,5 +1,5 @@
 [weblogic]
-192.168.215.6 ansible_user=cytan ansible_ssh_pass='r3dh4t1!2'
+192.168.1.102 ansible_user=cytan ansible_ssh_pass='r3dh4t1!2'
 
 [local]
 localhost ansible_connection=local

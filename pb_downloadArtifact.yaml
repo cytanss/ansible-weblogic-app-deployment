@@ -5,7 +5,7 @@
       maven_artifact:
         repository_url:     "http://nexus3-nexus-project.apps.cluster-a3e9.a3e9.sandbox567.opentlc.com/repository/releases/"
         group_id:           "com.redhat"
-        artifact_id:        "{{ appname | default('SampleWebApp!') }}"
+        artifact_id:        "{{ appname | default('SampleWebApp') }}"
         version:            "latest"
         extension:          "war"
         dest:               "/home/cytan/Downloads/SampleWebApp.war"
