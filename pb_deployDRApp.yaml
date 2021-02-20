@@ -1,0 +1,10 @@
+- name: Deploy an applicaiton to DR using wlst
+  hosts: all
+  tasks:
+    - name: Deploying SampleWebApp to DR WebLogic Cluster wls_cluster_1
+      command: "/home/cytan/Oracle/Middleware/Oracle_Home/oracle_common/common/bin/wlst.sh /home/cytan/Oracle/Middleware/Oracle_Home/oracle_common/common/bin/py_drDeploy.py {{ username | default('deployer') }} {{ password | default('weblogic1') }} {{ appname | default('SampleWebApp') }} {{ targets | default('wls_cluster_1') }}"
+      register: output
+      failed_when: "'Deployment status ---- completed' not in output.stdout"
+
+    - debug:
+        var: output

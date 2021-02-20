@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Deploying SampleWebApp to WebLogic Cluster wls_cluster_1
-      command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username {{ username | default('deployer') }} -password {{ password | default('weblogic1') }} -name {{ appname | default('SampleWebApp') }} /home/cytan/Downloads/SampleWebApp.war -deploy -targets {{ targets | default('wls_cluster_1!') }} -timeout 300"
+      command: "java -cp /home/cytan/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar weblogic.Deployer -verbose -noexit -adminurl http://localhost:7001 -username {{ username | default('deployer') }} -password {{ password | default('weblogic1') }} -name {{ appname | default('SampleWebApp') }} /home/cytan/Downloads/SampleWebApp.war -deploy -targets {{ targets | default('wls_cluster_1') }} -timeout 300"
       register: output
       failed_when: "'failed' in output.stderr"
 
