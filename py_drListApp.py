@@ -19,7 +19,7 @@ print('----------Connect to the WebLogic AdminServer')
 connect(username,password,'http://weblogic-weblogic-dr.apps.cluster-a3e9.a3e9.sandbox567.opentlc.com:80')
 print('\n')
 
-print('----------Deploy application to the WebLogic server')
+print('----------Get the list of application at DR WebLogic server')
 deplymentsList=cmo.getAppDeployments()
 print('AppList ---- ')
 print(deplymentsList)
