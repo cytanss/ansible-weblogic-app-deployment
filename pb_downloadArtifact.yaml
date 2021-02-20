@@ -3,7 +3,7 @@
   tasks:
     - name:                 Download artifact from Nexus
       maven_artifact:
-        repository_url:     "http://192.168.215.1:8081/repository/releases/"
+        repository_url:     "http://nexus3-nexus-project.apps.cluster-a3e9.a3e9.sandbox567.opentlc.com/repository/releases/"
         group_id:           "com.redhat"
         artifact_id:        "{{ appname | default('SampleWebApp!') }}"
         version:            "latest"
