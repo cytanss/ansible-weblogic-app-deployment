@@ -1,0 +1,18 @@
+- name: Perform simple health checks to ensure DR web page is still running properly
+  hosts: all
+  tasks:
+#    - wait_for:
+#      timeout: 3
+    - name: Accesing managed server 1 DR SampleWebApp
+      uri:
+        url: "http://managedserver1-weblogic-dr.apps.cluster-a3e9.a3e9.sandbox567.opentlc.com/{{ appname | default('SampleWebApp') }}"
+        method: GET
+        return_content: yes
+        status_code: 200
+
+    - name: Accesing managed server 2 DR SampleWebApp
+      uri:
+        url: "http://managedserver2-weblogic-dr.apps.cluster-a3e9.a3e9.sandbox567.opentlc.com/{{ appname | default('SampleWebApp') }}"
+        method: GET
+        return_content: yes
+        status_code: 200
